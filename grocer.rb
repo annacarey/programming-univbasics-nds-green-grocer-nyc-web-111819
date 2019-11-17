@@ -60,6 +60,13 @@ def apply_clearance(cart)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
+  new_cart = []
+  cart.each do |each_item|
+    if each_item[:clearance] == true 
+      discounted_item = {}
+      discounted_item[:name] = 
+  end
+end 
 end
 
 def checkout(cart, coupons)
