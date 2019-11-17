@@ -38,16 +38,15 @@ def apply_coupons(cart, coupons)
   # REMEMBER: This method **should** update cart
   cart.each do |each_item|
   coupons.each do |coupon|
-    p coupon 
+
       discounted_item = {}
-      p each_item[:item] == coupon[:item] 
-      p each_item[:count] == coupon[:num]
+      
       if each_item[:item] == coupon[:item] && each_item[:count] >= coupon[:num]
         discounted_item[:item] = each_item[:item] + " W/COUPON"
         discounted_item[:price] = coupon[:cost] / coupon[:num]
         discounted_item[:count] = coupon[:num]
         discounted_item[:clearance] = each_item[:clearance]
-        p discounted_item
+
         cart << discounted_item
         each_item[:count] -= coupon[:num]
     end
@@ -73,7 +72,6 @@ def apply_clearance(cart)
       new_cart << each_item
   end
 end 
-p new_cart
 return new_cart
 end
 
