@@ -64,7 +64,8 @@ def apply_clearance(cart)
   cart.each do |each_item|
     if each_item[:clearance] == true 
       discounted_item = {}
-      discounted_item[:name] = 
+      discounted_item[:item] = each_item[:item]
+      discounted_item[:price] = (each_item[:price] - each_item[:price]*(1/20)
   end
 end 
 end
