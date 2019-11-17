@@ -65,6 +65,7 @@ def apply_clearance(cart)
     if each_item[:clearance] == true 
       discounted_item = {}
       discounted_item[:item] = each_item[:item]
+      p each_item
       p each_item[:price] - each_item[:price]*(1/20)
       discounted_item[:price] = (each_item[:price] - each_item[:price]*(1/20)).round(2)
       discounted_item[:clearance] = each_item[:clearance]
