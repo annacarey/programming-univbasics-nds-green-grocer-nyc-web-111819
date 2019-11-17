@@ -94,5 +94,5 @@ def checkout(cart, coupons)
   newer_cart.each do |each_item|
     total += each_item[:price] * each_item[:count]
   end
-  return newer_cart
+  return total
 end
